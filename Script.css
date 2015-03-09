@@ -1,6 +1,6 @@
 header,h2
 {
-//background-color : #000080;
+background-color : #000080;
 text-align : center;
 color : white;
 border: 1px, solid grey;
@@ -52,7 +52,6 @@ table tr:nth-child(even) {
    background-color : lime;
 
  }
-
 
 
 #div4 {
