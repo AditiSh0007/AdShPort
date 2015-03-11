@@ -4,22 +4,65 @@ header,h2
 text-align : center;
 color : white;
 border: 1px, solid grey;
+background-color : #00CED1;
+}
 
+h3{
+text-decoration:underline;
+}
+//for angular color picker 
+
+
+//Jquery UI
+
+ .toggler { width:700; height: 200px; position: relative; }
+    #button { padding: .5em 1em; text-decoration: none; }
+    #effect { width: 240px; height: 135px; padding: 0.4em; position: relative; background: #fff; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  
+// JQUERY PROGRESSBAR
+
+.ui-progressbar {
+    position: relative;
+  }
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+#ang1
+{
+  width :500px;
+  height:100%;
+}
+.rgb
+{
+  height:100%;  
+  text-align:center;
+}
+.rgb input
+{
+  height:100%;
 }
 
 #boxSh
 {   width: 150px;
     height: 50px;
-    background-color: lime;
+    background-color: yellow;
     box-shadow: 10px 10px 5px pink;
 }
+
+
+
 #accordion
 {
 font-size: 14px;
 }
 #ad1
 {
-background-color : blue;
+background-color : #0000FF;
 color :  white;
 
 }
@@ -57,48 +100,48 @@ table tr:nth-child(even) {
 
 #div4 {
     border: 15px solid transparent;
-    width: 250px;
+    width: 250px;	
     padding: 10px 20px;
 }
 
 #round { 
-    -webkit-border-image: url(colorful-berries-border-975445.jpg) 30 30 round; /* Safari 3.1-5 */
-    -o-border-image: url(colorful-berries-border-975445.jpg) 30 30 round; /* Opera 11-12.1 */
+    -webkit-border-image: url(colorful-berries-border-975445.jpg) 30 30 round; 
+    -o-border-image: url(colorful-berries-border-975445.jpg) 30 30 round; 
     border-image: url(colorful-berries-border-975445.jpg) 30 30 round;
 }
 
 #stretch {
-    -webkit-border-image: url(colorful-berries-border-975445.jpg) 30 30 stretch; /* Safari 3.1-5 */
-    -o-border-image: url(colorful-berries-border-975445.jpg) 30 30 stretch; /* Opera 11-12.1 */
+    -webkit-border-image: url(colorful-berries-border-975445.jpg) 30 30 stretch; 
+    -o-border-image: url(colorful-berries-border-975445.jpg) 30 30 stretch; 
     border-image: url(colorful-berries-border-975445.jpg) 30 30 stretch;
 }
 
 #grad1 {
     height: 200px;
-    background: -webkit-linear-gradient(left top, red , blue); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, red, blue); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, red, blue); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, red , blue); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(left top, red , blue); 
+    background: -o-linear-gradient(bottom right, red, blue); 
+    background: -moz-linear-gradient(bottom right, red, blue);
+    background: linear-gradient(to bottom right, red , blue); 
 }
 
 #radgrad {
     height: 150px;
     width: 200px;
-    background: -webkit-radial-gradient(red 5%, green 15%, blue 60%); /* Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(red 5%, green 15%, blue 60%); /* For Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(red 5%, green 15%, blue 60%); /* For Firefox 3.6 to 15 */
-    background: radial-gradient(red 5%, green 15%, blue 60%); /* Standard syntax (must be last) */
+    background: -webkit-radial-gradient(red 5%, green 15%, blue 60%); 
+    background: -o-radial-gradient(red 5%, green 15%, blue 60%); 
+    background: -moz-radial-gradient(red 5%, green 15%, blue 60%); 
+    background: radial-gradient(red 5%, green 15%, blue 60%); 
 
 }
+
+
 #div7
  {
 width:150px;height:50px;
-padding:10px;border:1px solid #aaaaaa;
+padding:10px;border:1px solid black;
 }
 
-h2
-{ background-color : #00CED1;
-}
+
 
 #nav1
 {text-align :right;

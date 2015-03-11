@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Website</title>
+     <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+      <link href="Script.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+<div class="container">
+ <div id="ad1" class="jumbotron"> 
+ <div class="row">
+   <div class="col-md-5">
+     <img src="Aditi.jpg" class="img-circle" width="200px;" height="200px;">
+   </div> 
+   <div class="col-md-7" style="text-align:right;">
+     <img src="icon_green-placemark_small.png">Sunnyvale,CA
+     <h1>Aditi Sharma</h1> <hr>     
+     <p >Front end developer</p> 
+      <a href="mailto:aditi.shankar0007@gmail.com"><img src="gmail-icon.png"> </a>
+     <a href="https://www.linkedin.com/in/aditiSharma7"><img src="icon-linkedin.png"></a>
+     <a href="https://www.google.com"><img src="search.png"></a>
+   </div>  
+    
+  </div>
+</div>
+
+<ul class="nav nav-tabs">
+    <li><a href="Personal.html">Home</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="html5.html">HTML5</a></li>
+    <li><a href="css3.html">CSS3</a></li>
+    <li class="active"><a href="#">Angular JS</a></li>
+    <li><a href="jqueryUI.html">Jquery UI</a></li>
+    <li><a href="contactMe.html">Contact Me</a></li>
+  </ul>
+<br/>
+
+    <div class="container" ng-app="angEx">
+      <h2>Angular JS Examples</h2>
+       <div class="row">
+        <div class="col-md-6">
+             <h3> Color Picker </h3>
+            <p> Slide the slider to pick the color </p>
+            <div id="ang1" class="rgb" ng-init="r=100; g=150; b=200;" style="background-color: rgb({{r}},{{g}},{{b}})">
+              <input type="range" min="0" max="255" step="1" ng-model="r">
+              <input type="range" min="0" max="255" step="1" ng-model="g">
+              <input type="range" min="0" max="255" step="1" ng-model="b">
+           </div>
+        </div>
+
+         <div class="col-md-6">
+            <h3> Editor example </h3>
+               <p> Write the message and save it.Message can be cleared using clear function. </p>
+             <div ng-controller="angCtrl" >
+                 <p><textarea ng-model="msg" cols="40" rows="10"></textarea></p>
+                  <p> <button ng-click="save()">Save</button>
+                      <button ng-click="clr()">Clear</button></p>
+                  <p>Number of characters left: <span ng-bind="lft()"></span></p>
+              </div>
+           </div>
+         </div>
+        </div> </div> 	
+   <footer id="foot1"></footer></div>
+   <script src="Main.js"></script>
+
+</body>
+</html>

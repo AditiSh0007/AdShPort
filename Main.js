@@ -1,10 +1,79 @@
+//Angular JS
 
-//Jquery UI accordian
- $(function() {
-   $( "#accordion" ).accordion({
-       collapsible: true
-        });
-     });
+var app = angular.module("angEx", []);
+app.controller("angCtrl", function($scope) {
+    $scope.msg = "";
+    $scope.lft  = function() {return 150 - $scope.msg.length;};
+    $scope.clr = function() {$scope.msg = "";};
+    $scope.save  = function() {alert("Saved!!!");};
+});
+
+$(function() {
+    $( "#accordion" ).accordion();
+  });
+
+//Jquery UI Progressbar
+
+$(function() {
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+ 
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+      },
+      complete: function() {
+        progressLabel.text( "Complete!" );
+      }
+    });
+ 
+    function progress() {
+      var val = progressbar.progressbar( "value" ) || 0;
+ 
+      progressbar.progressbar( "value", val + 2 );
+ 
+      if ( val < 99 ) {
+        setTimeout( progress, 80 );
+      }
+    }
+ 
+    setTimeout( progress, 2000 );
+  });
+// Jquery Dialog
+
+$(document).ready(function(){
+    $("#dial").click(function(){
+        $("#dialog").dialog();
+    });
+});
+  
+
+// Jquery Animate
+$(function() {
+    var state = true;
+    $( "#button" ).click(function() {
+      if ( state ) {
+        $( "#effect" ).animate({
+          backgroundColor: "lime",
+          color: "brown",
+          width: 700
+        }, 1000 );
+      } else {
+        $( "#effect" ).animate({
+          backgroundColor: "brown",
+          color: "#000",
+          width: 340
+        }, 1000 );
+      }
+      state = !state;
+    });
+  });
+
+
+
+
+
 document.getElementById('foot1').innerHTML = 
 " <p>&copy;  " + new Date().getFullYear() + " .All rights reserved.</p>";
 
@@ -91,24 +160,16 @@ function drop(ev) {
 }
 
 
-// LOCAL storage
-// Check browser support
-if (typeof(Storage) != "undefined") {
-    // Store
-    localStorage.setItem("feature", "HTML5 local storage");
-    // Retrieve
-    document.getElementById("result").innerHTML = localStorage.getItem("feature");
-} else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
 
 //Angular Js
-function personController($scope) {
-    $scope.firstName = "John",
-    $scope.lastName = "Doe",
-    $scope.fullName = function() {
-        return $scope.firstName + " " + $scope.lastName;
-    }
+
+function EmpCtrl($scope) { 
+   $scope.reset = function(){
+          $scope.frstName = "A";
+	  $scope.lstName = "Sh";
+	  $scope.eml = "ex@ex.com";
+   }   
+   $scope.reset();
 }
 
 //angular bootstrap
@@ -118,12 +179,12 @@ $scope.lName = '';
 $scope.passw1 = '';
 $scope.passw2 = '';
 $scope.users = [
-{id:1, fName:'Hege',  lName:"Pege" },
-{id:2, fName:'Kim',   lName:"Pim" },
-{id:3, fName:'Sal',   lName:"Smith" },
-{id:4, fName:'Jack',  lName:"Jones" },
-{id:5, fName:'John',  lName:"Doe" },
-{id:6, fName:'Peter', lName:"Pan" }
+{id:1, fName:'Ram',  lName:"Paru" },
+{id:2, fName:'Shyam',   lName:"Singh" },
+{id:3, fName:'Sai',   lName:"Sahi" },
+{id:4, fName:'Kelly',  lName:"Ojha" },
+{id:5, fName:'Anupama',  lName:"Jha" },
+{id:6, fName:'Putul', lName:"Kumari" }
 ];
 $scope.edit = true;
 $scope.error = false;
@@ -165,48 +226,6 @@ $scope.test = function() {
 
 //css3
 
-
-//Ajax and Json
-
-var xmlhttp = new XMLHttpRequest();
-var url = "http://www.w3schools.com/website/Customers_MYSQL.php";
-
-xmlhttp.onreadystatechange=function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        myFunction(xmlhttp.responseText);
-    }
-}
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
-function myFunction(response) {
-    var arr = JSON.parse(response);
-    var i;
-    var out = "<table>";
-
-    for(i = 0; i < arr.length; i++) {
-        out += "<tr><td>" +
-        arr[i].Name +
-        "</td><td>" +
-        arr[i].City +
-        "</td><td>" +
-        arr[i].Country +
-        "</td></tr>";
-    }
-    out += "</table>"
-    document.getElementById("id01").innerHTML = out;
-}
-//
-
-//Angular JS
-
-var app = angular.module("myNoteApp", []);
-app.controller("myNoteCtrl", function($scope) {
-    $scope.message = "";
-    $scope.left  = function() {return 150 - $scope.message.length;};
-    $scope.clear = function() {$scope.message = "";};
-    $scope.save  = function() {alert("Note Saved");};
-});
 
 //Rectangle
 var can = document.getElementById("can1");
