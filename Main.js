@@ -75,7 +75,7 @@ $(function() {
 
 
 document.getElementById('foot1').innerHTML = 
-" <p>&copy;  " + new Date().getFullYear() + " .All rights reserved.</p>";
+" <p>&copy;  " + new Date().getFullYear() + ".All rights reserved.</p>";
 
 
 //Geolocation
